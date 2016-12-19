@@ -1,0 +1,2648 @@
+@prefix : <http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0> a owl:Ontology ;
+	owl:imports <http://www.opengis.net/ont/geosparql> , <http://www.opengis.net/ont/sf> , <http://www.opengis.net/ont/gml> , <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> , <http://www.w3.org/2004/02/skos/core> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/publisher
+
+<http://purl.org/dc/terms/publisher> a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#colore
+
+:colore a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#commonDefinition
+
+:commonDefinition a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#haindividui
+
+:haindividui a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#keyword
+
+:keyword a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#lemma
+
+:lemma a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#sinonimo
+
+:sinonimo a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2002/07/owl#minQualifiedCardinality
+
+owl:minQualifiedCardinality a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2002/07/owl#qualifiedCardinality
+
+owl:qualifiedCardinality a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_fermata
+
+:ha_fermata a owl:ObjectProperty ;
+	rdfs:domain :Trasporto_Pubblico_Locale ;
+	rdfs:range :Fermate_Trasporto_Pubblico ;
+	rdfs:label "Ha Fermata"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_focus
+
+:ha_focus a owl:ObjectProperty ;
+	rdfs:label "Ha Focus"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_focus_contratto_fiume
+
+:ha_focus_contratto_fiume a owl:ObjectProperty ;
+	rdfs:domain :Contratto_Di_Fiume ;
+	rdfs:range :Beni_Paesaggistici ;
+	rdfs:label "Ha Focus"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_focus_pum
+
+:ha_focus_pum a owl:ObjectProperty ;
+	rdfs:domain :PUM ;
+	rdfs:range :Infrastrutture ;
+	rdfs:label "Ha Focus"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_obiettivo
+
+:ha_obiettivo a owl:ObjectProperty ;
+	rdfs:label "Ha Obiettivo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_rif_normativo
+
+:ha_rif_normativo a owl:ObjectProperty ;
+	rdfs:label "Ha Riferimento Normativo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_stato
+
+:ha_stato a owl:ObjectProperty ;
+	rdfs:domain :Territorio ;
+	rdfs:range :Stato ;
+	rdfs:label "Ha Stato"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ha_stazione
+
+:ha_stazione a owl:ObjectProperty ;
+	rdfs:domain :Linee_Ferroviarie ;
+	rdfs:range :Stazioni_Ferroviarie ;
+	rdfs:label "Ha Stazione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasOldObjectValue
+
+:hasOldObjectValue a owl:ObjectProperty ;
+	rdfs:domain :Revision .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasOldProvenance
+
+:hasOldProvenance a owl:ObjectProperty ;
+	rdfs:domain :Revision ;
+	rdfs:range :Provenance .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasProvenance
+
+:hasProvenance a owl:ObjectProperty ;
+	rdfs:domain :Caratteristiche_Geometriche ;
+	rdfs:range :Provenance .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasRevisedProperty
+
+:hasRevisedProperty a owl:ObjectProperty ;
+	rdfs:domain :Revision .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasRevision
+
+:hasRevision a owl:ObjectProperty ;
+	rdfs:domain :Caratteristiche_Geometriche ;
+	rdfs:range :Revision .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#mette_in_rete
+
+:mette_in_rete a owl:ObjectProperty ;
+	rdfs:label "Mette In Rete"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#norma
+
+:norma a owl:ObjectProperty ;
+	rdfs:domain :Riferimenti_Normativi ;
+	rdfs:range :Territorio ;
+	rdfs:label "Norma"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#norma_prgc
+
+:norma_prgc a owl:ObjectProperty ;
+	rdfs:domain :PRGC ;
+	rdfs:range :Aree_Di_Intervento ;
+	rdfs:label "Norma"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#norma_put
+
+:norma_put a owl:ObjectProperty ;
+	rdfs:domain :PUT ;
+	rdfs:range :Infrastrutture ;
+	rdfs:label "Norma"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#su
+
+:su a owl:ObjectProperty ;
+	rdfs:domain :Segnalazioni ;
+	rdfs:range :Territorio ;
+	rdfs:label "Su"@it .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#accesso_disabili
+
+:accesso_disabili a owl:DatatypeProperty ;
+	rdfs:domain :Biblioteche ;
+	rdfs:label "Accesso Disabili"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ambito_parchi_urbani
+
+:ambito_parchi_urbani a owl:DatatypeProperty ;
+	rdfs:domain :Parchi_Urbani ;
+	rdfs:label "Ambito Parco"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#anno_inizio_negozi
+
+:anno_inizio_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Anno Di Inizio Attività"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#azienda
+
+:azienda a owl:DatatypeProperty ;
+	rdfs:domain :Ospedali ;
+	rdfs:label "Azienda"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#cap
+
+:cap a owl:DatatypeProperty ;
+	rdfs:domain _:genid1 .
+
+_:genid1 a owl:Class ;
+	owl:unionOf _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :Aree_Sportive ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first :Negozi ;
+	rdf:rest _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid3 .
+
+_:genid3 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid2 .
+
+_:genid2 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:cap rdfs:label "CAP"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#carraio_negozi
+
+:carraio_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Passo Carraio"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#categoria_merceologica_negozi
+
+:categoria_merceologica_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Categoria Merceologica"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#chiusura_invernale_farmacie
+
+:chiusura_invernale_farmacie a owl:DatatypeProperty ;
+	rdfs:domain :Farmacie ;
+	rdfs:label "Chiusura Invernale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#circoscrizione
+
+:circoscrizione a owl:DatatypeProperty ;
+	rdfs:domain _:genid15 .
+
+_:genid15 a owl:Class ;
+	owl:unionOf _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first :Aree_Sportive ;
+	rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid28 .
+
+_:genid28 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid27 .
+
+_:genid27 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid25 .
+
+_:genid25 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid23 .
+
+_:genid23 a rdf:List ;
+	rdf:first :Mercati ;
+	rdf:rest _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first :Percorsi_Pedonali ;
+	rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first :Piste_Ciclabili ;
+	rdf:rest _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:circoscrizione rdfs:label "Circoscrizione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#città
+
+:città a owl:DatatypeProperty ;
+	rdfs:domain _:genid31 .
+
+_:genid31 a owl:Class ;
+	owl:unionOf _:genid50 .
+
+_:genid50 a rdf:List ;
+	rdf:first :Aree_Industriali ;
+	rdf:rest _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first :Aree_Sportive ;
+	rdf:rest _:genid48 .
+
+_:genid48 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid47 .
+
+_:genid47 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first :Centri_Commerciali ;
+	rdf:rest _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first :Centri_Storici ;
+	rdf:rest _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid41 .
+
+_:genid41 a rdf:List ;
+	rdf:first :Fattorie_Didattiche ;
+	rdf:rest _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid39 .
+
+_:genid39 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid37 .
+
+_:genid37 a rdf:List ;
+	rdf:first :Parchi_Urbani ;
+	rdf:rest _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid35 .
+
+_:genid35 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid34 .
+
+_:genid34 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first :Strutture_Ricettive ;
+	rdf:rest _:genid32 .
+
+_:genid32 a rdf:List ;
+	rdf:first :Viabilità_Veicolare ;
+	rdf:rest rdf:nil .
+
+:città rdfs:label "Città"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#competenza_aree_sportive
+
+:competenza_aree_sportive a owl:DatatypeProperty ;
+	rdfs:domain :Aree_Sportive ;
+	rdfs:label "Competenza"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#comprensorio
+
+:comprensorio a owl:DatatypeProperty ;
+	rdfs:domain :Scuole ;
+	rdfs:label "Comprensorio"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#comunale
+
+:comunale a owl:DatatypeProperty ;
+	rdfs:domain _:genid51 .
+
+_:genid51 a owl:Class ;
+	owl:unionOf _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:comunale rdfs:label "Comunale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#criticità_piste_ciclabili
+
+:criticità_piste_ciclabili a owl:DatatypeProperty ;
+	rdfs:domain :Piste_Ciclabili ;
+	rdfs:label "Criticità"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#culto
+
+:culto a owl:DatatypeProperty ;
+	rdfs:domain :Luoghi_Di_Culto ;
+	rdfs:label "Culto"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#denominazione
+
+:denominazione a owl:DatatypeProperty ;
+	rdfs:domain _:genid54 .
+
+_:genid54 a owl:Class ;
+	owl:unionOf _:genid81 .
+
+_:genid81 a rdf:List ;
+	rdf:first :Aree_Di_Compensazione_Ecologica ;
+	rdf:rest _:genid80 .
+
+_:genid80 a rdf:List ;
+	rdf:first :Aree_Sportive ;
+	rdf:rest _:genid79 .
+
+_:genid79 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid78 .
+
+_:genid78 a rdf:List ;
+	rdf:first :Beni_Architettonici ;
+	rdf:rest _:genid77 .
+
+_:genid77 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid76 .
+
+_:genid76 a rdf:List ;
+	rdf:first :Centri_Commerciali ;
+	rdf:rest _:genid75 .
+
+_:genid75 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid74 .
+
+_:genid74 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid73 .
+
+_:genid73 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid72 .
+
+_:genid72 a rdf:List ;
+	rdf:first :Fattorie_Didattiche ;
+	rdf:rest _:genid71 .
+
+_:genid71 a rdf:List ;
+	rdf:first :Fermate_Trasporto_Pubblico ;
+	rdf:rest _:genid70 .
+
+_:genid70 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid69 .
+
+_:genid69 a rdf:List ;
+	rdf:first :Mercati ;
+	rdf:rest _:genid68 .
+
+_:genid68 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid67 .
+
+_:genid67 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid66 .
+
+_:genid66 a rdf:List ;
+	rdf:first :Parcheggi ;
+	rdf:rest _:genid65 .
+
+_:genid65 a rdf:List ;
+	rdf:first :Parchi_Urbani ;
+	rdf:rest _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first :Percorsi_Pedonali ;
+	rdf:rest _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first :Piste_Ciclabili ;
+	rdf:rest _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :Postazioni_Bike_Sharing ;
+	rdf:rest _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first :Postazioni_Car_Sharing ;
+	rdf:rest _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first :Stazioni_Ferroviarie ;
+	rdf:rest _:genid56 .
+
+_:genid56 a rdf:List ;
+	rdf:first :Strutture_Ricettive ;
+	rdf:rest _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first :Viabilità_Veicolare ;
+	rdf:rest rdf:nil .
+
+:denominazione rdfs:label "Denominazione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#denominazione_scuole
+
+:denominazione_scuole a owl:DatatypeProperty ;
+	rdfs:domain :Scuole ;
+	rdfs:label "Denominazione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#descrizione_ripartizione_negozi
+
+:descrizione_ripartizione_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Descrizione Ripartizione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#dettaglio_ripartizione_negozi
+
+:dettaglio_ripartizione_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Dettaglio Ripartizione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#direzione_piste_ciclabili
+
+:direzione_piste_ciclabili a owl:DatatypeProperty ;
+	rdfs:domain :Piste_Ciclabili ;
+	rdfs:label "Direzione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#disciplina_aree_sportive
+
+:disciplina_aree_sportive a owl:DatatypeProperty ;
+	rdfs:domain :Aree_Sportive ;
+	rdfs:label "Disciplina"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#dismessa_linee_ferroviarie
+
+:dismessa_linee_ferroviarie a owl:DatatypeProperty ;
+	rdfs:domain :Linee_Ferroviarie ;
+	rdfs:label "Linea Dismessa"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#email
+
+:email a owl:DatatypeProperty ;
+	rdfs:domain _:genid82 .
+
+_:genid82 a owl:Class ;
+	owl:unionOf _:genid89 .
+
+_:genid89 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid88 .
+
+_:genid88 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid87 .
+
+_:genid87 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid86 .
+
+_:genid86 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid85 .
+
+_:genid85 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid84 .
+
+_:genid84 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid83 .
+
+_:genid83 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:email rdfs:label "E-Mail"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#entità
+
+:entità a owl:DatatypeProperty ;
+	rdfs:label "Entità"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#fax
+
+:fax a owl:DatatypeProperty ;
+	rdfs:domain _:genid90 .
+
+_:genid90 a owl:Class ;
+	owl:unionOf _:genid97 .
+
+_:genid97 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid96 .
+
+_:genid96 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid95 .
+
+_:genid95 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid94 .
+
+_:genid94 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid93 .
+
+_:genid93 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid92 .
+
+_:genid92 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid91 .
+
+_:genid91 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:fax rdfs:label "Fax"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ferie
+
+:ferie a owl:DatatypeProperty ;
+	rdfs:domain :Farmacie ;
+	rdfs:label "Ferie"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#fondo_piste_ciclabili
+
+:fondo_piste_ciclabili a owl:DatatypeProperty ;
+	rdfs:domain :Piste_Ciclabili ;
+	rdfs:label "Fondo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#fronte_via_negozi
+
+:fronte_via_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Fronte Via"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#gestione
+
+:gestione a owl:DatatypeProperty ;
+	rdfs:domain _:genid98 .
+
+_:genid98 a owl:Class ;
+	owl:unionOf _:genid100 .
+
+_:genid100 a rdf:List ;
+	rdf:first :Parcheggi ;
+	rdf:rest _:genid99 .
+
+_:genid99 a rdf:List ;
+	rdf:first :Parchi_Urbani ;
+	rdf:rest rdf:nil .
+
+:gestione rdfs:label "Gestione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#gestione_parchi_urbani
+
+:gestione_parchi_urbani a owl:DatatypeProperty ;
+	rdfs:label "Gestione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#giorni_mercati
+
+:giorni_mercati a owl:DatatypeProperty ;
+	rdfs:domain :Mercati ;
+	rdfs:label "Giorni"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasAuthor
+
+:hasAuthor a owl:DatatypeProperty ;
+	rdfs:domain :Provenance ;
+	rdfs:range xsd:string .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasOldDataValue
+
+:hasOldDataValue a owl:DatatypeProperty ;
+	rdfs:domain :Revision .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#hasPublicationDate
+
+:hasPublicationDate a owl:DatatypeProperty ;
+	rdfs:domain :Provenance ;
+	rdfs:range xsd:dateTime .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#id
+
+:id a owl:DatatypeProperty ;
+	rdfs:domain :Ospedali ;
+	rdfs:label "ID"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#indirizzo
+
+:indirizzo a owl:DatatypeProperty ;
+	rdfs:domain _:genid101 .
+
+_:genid101 a owl:Class ;
+	owl:unionOf _:genid119 .
+
+_:genid119 a rdf:List ;
+	rdf:first :Aree_Sportive ;
+	rdf:rest _:genid118 .
+
+_:genid118 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid117 .
+
+_:genid117 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid116 .
+
+_:genid116 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid115 .
+
+_:genid115 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid114 .
+
+_:genid114 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid113 .
+
+_:genid113 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid112 .
+
+_:genid112 a rdf:List ;
+	rdf:first :Mercati ;
+	rdf:rest _:genid111 .
+
+_:genid111 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid110 .
+
+_:genid110 a rdf:List ;
+	rdf:first :Negozi ;
+	rdf:rest _:genid109 .
+
+_:genid109 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid108 .
+
+_:genid108 a rdf:List ;
+	rdf:first :Parcheggi ;
+	rdf:rest _:genid107 .
+
+_:genid107 a rdf:List ;
+	rdf:first :Percorsi_Pedonali ;
+	rdf:rest _:genid106 .
+
+_:genid106 a rdf:List ;
+	rdf:first :Piste_Ciclabili ;
+	rdf:rest _:genid105 .
+
+_:genid105 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid104 .
+
+_:genid104 a rdf:List ;
+	rdf:first :Postazioni_Car_Sharing ;
+	rdf:rest _:genid103 .
+
+_:genid103 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid102 .
+
+_:genid102 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:indirizzo rdfs:label "Indirizzo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#mese_inizio_negozi
+
+:mese_inizio_negozi a owl:DatatypeProperty ;
+	rdfs:domain :Negozi ;
+	rdfs:label "Mese Di Inizio Attività"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#notturna
+
+:notturna a owl:DatatypeProperty ;
+	rdfs:domain :Farmacie ;
+	rdfs:label "Notturna"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#numero_cup
+
+:numero_cup a owl:DatatypeProperty ;
+	rdfs:domain :Ospedali ;
+	rdfs:label "Num. Telefono CUP"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#numero_posti
+
+:numero_posti a owl:DatatypeProperty ;
+	rdfs:domain _:genid120 .
+
+_:genid120 a owl:Class ;
+	owl:unionOf _:genid122 .
+
+_:genid122 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid121 .
+
+_:genid121 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest rdf:nil .
+
+:numero_posti rdfs:label "Numero Posti"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#numero_sale_cinema
+
+:numero_sale_cinema a owl:DatatypeProperty ;
+	rdfs:domain :Cinema ;
+	rdfs:label "Numero Sale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#numero_sovracup
+
+:numero_sovracup a owl:DatatypeProperty ;
+	rdfs:domain :Ospedali ;
+	rdfs:label "Num. Telefono SovraCUP"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#numero_urp
+
+:numero_urp a owl:DatatypeProperty ;
+	rdfs:domain :Ospedali ;
+	rdfs:label "Numero URP"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#orario
+
+:orario a owl:DatatypeProperty ;
+	rdfs:domain _:genid123 .
+
+_:genid123 a owl:Class ;
+	owl:unionOf _:genid126 .
+
+_:genid126 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid125 .
+
+_:genid125 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid124 .
+
+_:genid124 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest rdf:nil .
+
+:orario rdfs:label "Orario"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#orario_estivo_farmacie
+
+:orario_estivo_farmacie a owl:DatatypeProperty ;
+	rdfs:domain :Farmacie ;
+	rdfs:label "Orario Estivo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#orario_invernale_farmacie
+
+:orario_invernale_farmacie a owl:DatatypeProperty ;
+	rdfs:domain :Farmacie ;
+	rdfs:label "Orario Invernale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#orario_messa
+
+:orario_messa a owl:DatatypeProperty ;
+	rdfs:domain :Luoghi_Di_Culto ;
+	rdfs:label "Orario Messa"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#orario_visite
+
+:orario_visite a owl:DatatypeProperty ;
+	rdfs:domain :Ospedali ;
+	rdfs:label "Orario Visite"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ordine
+
+:ordine a owl:DatatypeProperty ;
+	rdfs:domain :Scuole ;
+	rdfs:label "Ordine"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#paritaria
+
+:paritaria a owl:DatatypeProperty ;
+	rdfs:domain :Scuole ;
+	rdfs:label "Paritaria"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#parroco
+
+:parroco a owl:DatatypeProperty ;
+	rdfs:domain :Luoghi_Di_Culto ;
+	rdfs:label "Parroco"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#polivalente_aree_sportive
+
+:polivalente_aree_sportive a owl:DatatypeProperty ;
+	rdfs:label "Polivalente"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#posti_auto_parcheggi
+
+:posti_auto_parcheggi a owl:DatatypeProperty ;
+	rdfs:domain :Parcheggi ;
+	rdfs:label "Posti Auto"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#preposizione_viabilità_veicolare
+
+:preposizione_viabilità_veicolare a owl:DatatypeProperty ;
+	rdfs:domain :Viabilità_Veicolare ;
+	rdfs:label "Preposizione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#sede_polizia
+
+:sede_polizia a owl:DatatypeProperty ;
+	rdfs:domain :Polizia ;
+	rdfs:label "Sede"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#società_aree_sportive
+
+:società_aree_sportive a owl:DatatypeProperty ;
+	rdfs:domain :Aree_Sportive ;
+	rdfs:label "Società"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#statale
+
+:statale a owl:DatatypeProperty ;
+	rdfs:domain :Scuole ;
+	rdfs:label "Statale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#telefono
+
+:telefono a owl:DatatypeProperty ;
+	rdfs:domain _:genid127 .
+
+_:genid127 a owl:Class ;
+	owl:unionOf _:genid138 .
+
+_:genid138 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid137 .
+
+_:genid137 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid136 .
+
+_:genid136 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid135 .
+
+_:genid135 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid134 .
+
+_:genid134 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid133 .
+
+_:genid133 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid132 .
+
+_:genid132 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid131 .
+
+_:genid131 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid130 .
+
+_:genid130 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid129 .
+
+_:genid129 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid128 .
+
+_:genid128 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:telefono rdfs:label "Num. Telefono"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#tipo_scuole
+
+:tipo_scuole a owl:DatatypeProperty ;
+	rdfs:domain :Scuole ;
+	rdfs:label "Tipo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#tipologia
+
+:tipologia a owl:DatatypeProperty ;
+	rdfs:domain _:genid139 .
+
+_:genid139 a owl:Class ;
+	owl:unionOf _:genid152 .
+
+_:genid152 a rdf:List ;
+	rdf:first :Aree_Boschive ;
+	rdf:rest _:genid151 .
+
+_:genid151 a rdf:List ;
+	rdf:first :Aree_Industriali ;
+	rdf:rest _:genid150 .
+
+_:genid150 a rdf:List ;
+	rdf:first :Beni_Architettonici ;
+	rdf:rest _:genid149 .
+
+_:genid149 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid148 .
+
+_:genid148 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid147 .
+
+_:genid147 a rdf:List ;
+	rdf:first :Negozi ;
+	rdf:rest _:genid146 .
+
+_:genid146 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid145 .
+
+_:genid145 a rdf:List ;
+	rdf:first :Parcheggi ;
+	rdf:rest _:genid144 .
+
+_:genid144 a rdf:List ;
+	rdf:first :Parchi_Urbani ;
+	rdf:rest _:genid143 .
+
+_:genid143 a rdf:List ;
+	rdf:first :Piste_Ciclabili ;
+	rdf:rest _:genid142 .
+
+_:genid142 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest _:genid141 .
+
+_:genid141 a rdf:List ;
+	rdf:first :Strutture_Ricettive ;
+	rdf:rest _:genid140 .
+
+_:genid140 a rdf:List ;
+	rdf:first :Viabilità_Veicolare ;
+	rdf:rest rdf:nil .
+
+:tipologia rdfs:label "Tipologia"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#toponimo
+
+:toponimo a owl:DatatypeProperty ;
+	rdfs:domain _:genid153 .
+
+_:genid153 a owl:Class ;
+	owl:unionOf _:genid155 .
+
+_:genid155 a rdf:List ;
+	rdf:first :Aree_Agricole ;
+	rdf:rest _:genid154 .
+
+_:genid154 a rdf:List ;
+	rdf:first :Fiumi ;
+	rdf:rest rdf:nil .
+
+:toponimo rdfs:label "Toponimo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#tratta_linee_ferroviarie
+
+:tratta_linee_ferroviarie a owl:DatatypeProperty ;
+	rdfs:domain :Linee_Ferroviarie ;
+	rdfs:label "Tratta"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ufficio
+
+:ufficio a owl:DatatypeProperty ;
+	rdfs:domain :Polizia ;
+	rdfs:label "Ufficio"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#url
+
+:url a owl:DatatypeProperty ;
+	rdfs:domain _:genid156 .
+
+_:genid156 a owl:Class ;
+	owl:unionOf _:genid171 .
+
+_:genid171 a rdf:List ;
+	rdf:first :Aree_Sportive ;
+	rdf:rest _:genid170 .
+
+_:genid170 a rdf:List ;
+	rdf:first :Asili_Nido ;
+	rdf:rest _:genid169 .
+
+_:genid169 a rdf:List ;
+	rdf:first :Biblioteche ;
+	rdf:rest _:genid168 .
+
+_:genid168 a rdf:List ;
+	rdf:first :Centri_Per_Infanzia ;
+	rdf:rest _:genid167 .
+
+_:genid167 a rdf:List ;
+	rdf:first :Cinema ;
+	rdf:rest _:genid166 .
+
+_:genid166 a rdf:List ;
+	rdf:first :Farmacie ;
+	rdf:rest _:genid165 .
+
+_:genid165 a rdf:List ;
+	rdf:first :Luoghi_Di_Culto ;
+	rdf:rest _:genid164 .
+
+_:genid164 a rdf:List ;
+	rdf:first :Musei ;
+	rdf:rest _:genid163 .
+
+_:genid163 a rdf:List ;
+	rdf:first :Ospedali ;
+	rdf:rest _:genid162 .
+
+_:genid162 a rdf:List ;
+	rdf:first :Parcheggi ;
+	rdf:rest _:genid161 .
+
+_:genid161 a rdf:List ;
+	rdf:first :Polizia ;
+	rdf:rest _:genid160 .
+
+_:genid160 a rdf:List ;
+	rdf:first :Postazioni_Bike_Sharing ;
+	rdf:rest _:genid159 .
+
+_:genid159 a rdf:List ;
+	rdf:first :Postazioni_Car_Sharing ;
+	rdf:rest _:genid158 .
+
+_:genid158 a rdf:List ;
+	rdf:first :Poste ;
+	rdf:rest _:genid157 .
+
+_:genid157 a rdf:List ;
+	rdf:first :Scuole ;
+	rdf:rest rdf:nil .
+
+:url rdfs:label "URL"@it .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.opengis.net/ont/geosparql#Feature
+
+<http://www.opengis.net/ont/geosparql#Feature> a owl:Class .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Agricole
+
+:Aree_Agricole a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Naturale ;
+	:colore "8dc63f" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "agricoltura"@it , "zona"@it ;
+	:lemma "agricolo"@it , "area"@it ;
+	:sinonimo "agrario"@it , "agricolo"@it , "area"@it , "località"@it , "regione"@it , "rurale"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Zone destinate all’agricoltura."@it ;
+	rdfs:label "Aree Agricole"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Boschive
+
+:Aree_Boschive a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Caratteristiche_Geometriche ;
+	:colore "005826" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "albero"@it , "arbusto"@it , "superficie"@it , "terreno"@it ;
+	:lemma "area"@it , "boschivo"@it ;
+	:sinonimo "area"@it , "boschivo"@it , "boscoso"@it , "comprensorio"@it , "località"@it , "regione"@it , "selvoso"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Ampia superficie di terreno coperto da alberi, solitamente d'alto fusto, e altri arbusti generalmente spontanei."@it ;
+	rdfs:label "Aree Boschive"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Di_Compensazione_Ecologica
+
+:Aree_Di_Compensazione_Ecologica a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Caratteristiche_Geometriche ;
+	:colore "00a651" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "conservazione"@it , "recupero"@it , "sfruttato"@it , "territorio"@it , "urbanizzato"@it ;
+	:lemma "area"@it , "compensazione"@it , "ecologico"@it ;
+	:sinonimo "ambientale"@it , "area"@it , "compensazione"@it , "compenso"@it , "comprensorio"@it , "ecologico"@it , "località"@it , "recupero"@it , "regione"@it , "restituzione"@it , "riequilibrio"@it , "riparazione"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Porzioni di territorio intensamente sfruttate o urbanizzate oggetto di misure di conservazione e recupero."@it ;
+	rdfs:label "Aree Di Compensazione Ecologica"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Di_Degrado
+
+:Aree_Di_Degrado a owl:Class ;
+	rdfs:subClassOf :Aree_Di_Intervento , :Caratteristiche_Geometriche ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "abbandono"@it , "incuria"@it , "territorio"@it ;
+	:lemma "area"@it , "degrado"@it ;
+	:sinonimo "area"@it , "comprensorio"@it , "decadenza"@it , "decadimento"@it , "declino"@it , "degrado"@it , "deperimento"@it , "deterioramento"@it , "deteriorazione"@it , "località"@it , "peggioramento"@it , "regione"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Parti del territorio caratterizzate da incuria e abbandono."@it ;
+	rdfs:label "Aree Di Degrado"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Di_Intervento
+
+:Aree_Di_Intervento a owl:Class ;
+	rdfs:subClassOf :Riferimenti_Normativi ;
+	:keyword "sviluppo"@it , "territorio"@it , "urbanizzazione"@it ;
+	:lemma "area"@it , "intervento"@it ;
+	:sinonimo "area"@it , "cantiere"@it , "costruzione"@it , "intervento"@it , "località"@it , "piano"@it , "progettato"@it , "progettuale"@it , "progettualità"@it , "proposta"@it , "recupero"@it , "regione"@it , "rinnovamento"@it , "superficie"@it , "trasformazione"@it , "urbano"@it , "zona"@it ;
+	rdfs:comment "Porzione di territorio a vario grado di urbanizzazione per la quale risulti in corso un processo di sviluppo complessivo o settoriale sulla base di una suscettività intrinseca dell’area."@it ;
+	rdfs:label "Aree Di Intervento"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Di_Pericolo
+
+:Aree_Di_Pericolo a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Caratteristiche_Geometriche , :Riferimenti_Normativi ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "fenomeno"@it , "minacciato"@it , "naturale"@it ;
+	:lemma "area"@it , "pericolo"@it ;
+	:sinonimo "area"@it , "comprensorio"@it , "località"@it , "pericolo"@it , "pericoloso"@it , "regione"@it , "rischio"@it , "rischio_per_la_sicurezza"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Zone minacciate da fenomeni naturali."@it ;
+	rdfs:label "Aree Di Pericolo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Di_Progetto
+
+:Aree_Di_Progetto a owl:Class ;
+	rdfs:subClassOf :Aree_Di_Intervento ;
+	:keyword "ristrutturazione"@it , "territorio"@it , "urbanistico"@it ;
+	:lemma "area"@it , "progetto"@it ;
+	:sinonimo "area"@it , "cantiere"@it , "costruzione"@it , "località"@it , "piano"@it , "progettato"@it , "progettazione"@it , "progetto"@it , "progettuale"@it , "progettualità"@it , "proposta"@it , "recupero"@it , "rinnovamento"@it , "strategico"@it , "strategie"@it , "studio"@it , "superficie"@it , "trasformazione"@it , "urbano"@it , "zona"@it ;
+	rdfs:comment "Parti del territorio nelle quali sono previste interventi di ristrutturazione del tessuto urbanistico."@it ;
+	rdfs:label "Aree Di Progetto"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Gioco
+
+:Aree_Gioco a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Verde_Attrezzato ;
+	:colore "eb91ba" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "infantile"@it , "svago"@it ;
+	:lemma "area"@it , "gioco"@it ;
+	:sinonimo "area"@it , "gioco"@it , "giuoco"@it , "località"@it , "regione"@it , "superficie"@it , "trastullo"@it , "zona"@it ;
+	rdfs:comment "Aree adibite allo svago infantile."@it ;
+	rdfs:label "Aree Gioco"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_In_Trasformazione
+
+:Aree_In_Trasformazione a owl:Class ;
+	rdfs:subClassOf :Aree_Di_Progetto , :Caratteristiche_Geometriche ;
+	:haindividui "true"^^xsd:boolean ;
+	:lemma "area"@it , "trasformazione"@it ;
+	:sinonimo "alterazione"@it , "area"@it , "cambiamento"@it , "cantiere"@it , "conversione"@it , "costruzione"@it , "località"@it , "mutazione"@it , "piano"@it , "progettato"@it , "progettuale"@it , "progettualità"@it , "proposta"@it , "recupero"@it , "regione"@it , "rinnovamento"@it , "superficie"@it , "tramutazione"@it , "trasformazione"@it , "urbano"@it , "variamento"@it , "zona"@it ;
+	rdfs:label "Aree Di Trasformazione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Industriali
+
+:Aree_Industriali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Edificato ;
+	:colore "8393ca" ;
+	:commonDefinition "Sono le aree caratterizzate dalla presenza di attività produttive, fabbriche, impianti, ovvero di attività per la produzione di beni, strumenti ed energia, per la crescita e lo sviluppo economico."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "crescita"@it , "energia"@it , "fabbrica"@it , "impianto"@it , "periferia"@it , "produttivo"@it , "produzione"@it , "sviluppo"@it ;
+	:lemma "area"@it , "industriale"@it ;
+	:sinonimo "area"@it , "comprensorio"@it , "industriale"@it , "località"@it , "regione"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Gruppo di stabilimenti generalmente localizzati nelle periferie delle città che svolgono attività economiche simili, producendo una gamma di prodotti che vengono venduti con l'obiettivo di trarre profitti."@it ;
+	rdfs:label "Aree Industriali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Picnic
+
+:Aree_Picnic a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Verde_Attrezzato ;
+	:colore "39b54a" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attrezzato"@it , "pasto"@it ;
+	:lemma "area"@it , "picnic"@it ;
+	:sinonimo "area"@it , "comprensorio"@it , "località"@it , "merenda"@it , "pic-nic"@it , "pic_nic"@it , "picnic"@it , "picnicing"@it , "regione"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Aree attrezzate adibite al consumo di pasti."@it ;
+	rdfs:label "Aree Picnic"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Protette
+
+:Aree_Protette a owl:Class ;
+	rdfs:subClassOf :Beni_Paesaggistici , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Protette_Provinciali
+
+:Aree_Protette_Provinciali a owl:Class ;
+	rdfs:subClassOf :Aree_Protette , :Caratteristiche_Geometriche ;
+	:commonDefinition "Le aree protette provinciali sono aree protette istituite dalla Provincia."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:lemma "area"@it , "protetto"@it , "provinciale"@it ;
+	:sinonimo "ambiente naturale"@it , "area"@it , "area naturale provinciale"@it , "area_naturale"@it , "area_naturale_protetta"@it , "area_naturalistica"@it , "area_protetta"@it , "bosco"@it , "comprensorio"@it , "habitat"@it , "località"@it , "oasi_naturale"@it , "parco provinciale"@it , "parco_naturale"@it , "provincia"@it , "provinciale"@it , "regione"@it , "riserva"@it , "riserva_biologica"@it , "riserva_faunistica"@it , "riserva_forestale"@it , "riserva_naturale"@it , "spazio_naturale"@it , "territorio_protetto"@it , "zona"@it , "zona_naturale"@it ;
+	rdfs:label "Aree Protette Provinciali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Residenziali
+
+:Aree_Residenziali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Edificato ;
+	:colore "f06eaa" ;
+	:commonDefinition "Le aree residenziali sono le aree edificate costituite dalla sola presenza di edifici residenziali, cioè destinati all’uso abitativo. Nelle aree residenziali possono essere presenti anche specifici servizi per la residenza, ma generalmente sono escluse le aree destinate principalmente ad attività produttive, servizi e infrastrutture."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "abitativo"@it , "abitato"@it , "civile"@it , "edificio"@it , "residenza"@it , "territorio"@it , "uso"@it ;
+	:lemma "area"@it , "residenziale"@it ;
+	:sinonimo "area"@it , "area_residenziale"@it , "comprensorio"@it , "immobile_residenziale"@it , "località"@it , "quartiere_residenziale"@it , "residenziale"@it , "superficie"@it , "zona"@it , "zona_residenziale"@it ;
+	rdfs:comment "Porzioni di territorio in cui si concentrano usi abitativi civili."@it ;
+	rdfs:label "Aree Residenziali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Sportive
+
+:Aree_Sportive a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Verde_Attrezzato ;
+	:colore "00746b" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attività fisica"@it , "sport"@it ;
+	:lemma "area"@it , "sportivo"@it ;
+	:sinonimo "area"@it , "comprensorio"@it , "località"@it , "regione"@it , "sport"@it , "sportivo"@it , "superficie"@it , "zona"@it ;
+	rdfs:comment "Aree adibite allo svolgimento di attività fisica."@it ;
+	rdfs:label "Aree Sportive"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Artificiale
+
+:Artificiale a owl:Class ;
+	rdfs:subClassOf :Territorio ;
+	:keyword "uomo"@it ;
+	:lemma "artificiale"@it ;
+	:sinonimo "affettato"@it , "artificiale"@it , "artificioso"@it , "manierato"@it , "sintetico"@it , "vezzoso"@it ;
+	rdfs:comment "Elementi realizzati dall’uomo."@it ;
+	rdfs:label "Artificiale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Asili_Nido
+
+:Asili_Nido a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "f49ac1" ;
+	:commonDefinition "Viene chiamata asilo nido la struttura educativa destinata ai bambini di età compresa tra i 3 mesi ed i 3 anni e che precede l'ingresso alla scuola dell'infanzia."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "bambino"@it , "educativo"@it , "età"@it , "struttura"@it ;
+	:lemma "asilo"@it , "asilo nido"@it , "nido"@it ;
+	:sinonimo "asilo"@it , "asilo_d'infanzia"@it , "asilo_infantile"@it , "giardino_d'infanzia"@it , "nido"@it , "scuola_dell'infanzia"@it , "scuola_materna"@it , "scuola_per_l'infanzia"@it ;
+	rdfs:comment "Struttura educativa destinata ai bambini di età compresa tra i 3 mesi ed i 3 anni." ;
+	rdfs:label "Asili Nido"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Autostrade
+
+:Autostrade a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Viabilità_Veicolare ;
+	:colore "000000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "scorrimento"@it , "strada"@it ;
+	:lemma "autostrada"@it ;
+	:sinonimo "accesso_controllato"@it , "accesso_controllato_autostrada"@it , "autostrada"@it , "autostrada_a_pagamento"@it , "autostrade"@it , "via"@it ;
+	rdfs:comment "Strada ad alto scorrimento."@it ;
+	rdfs:label "Autostrade"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Belvedere_Artificiale
+
+:Belvedere_Artificiale a owl:Class ;
+	rdfs:subClassOf :Beni_Culturali , :Caratteristiche_Geometriche ;
+	:colore "005b7f" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "artificiale"@it , "luogo"@it , "panorama"@it ;
+	:lemma "artificiale"@it , "belvedere"@it ;
+	:sinonimo "artificiale"@it , "artificioso"@it , "belvedere"@it , "punto_d'osservazione"@it ;
+	rdfs:comment "Luogo da cui si può godere un vasto panorama, realizzato a tale scopo per uso pubblico o privato."@it ;
+	rdfs:label "Belvedere Artificiale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Belvedere_Naturale
+
+:Belvedere_Naturale a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Caratteristiche_Geometriche ;
+	:colore "aba000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "luogo"@it , "naturale"@it , "panorama"@it ;
+	:lemma "belvedere"@it , "naturale"@it ;
+	:sinonimo "ambiente"@it , "belvedere"@it , "natura"@it , "naturale"@it , "naturalistico"@it , "non_artificioso"@it , "punto_d'osservazione"@it ;
+	rdfs:comment "Luogo da cui si può godere un vasto panorama, la cui formazione è naturale e non attribuibile all’essere umano."@it ;
+	rdfs:label "Belvedere Naturale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Archeologici
+
+:Beni_Archeologici a owl:Class ;
+	rdfs:subClassOf :Beni_Culturali , :Caratteristiche_Geometriche ;
+	:colore "005952" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "archeologico"@it , "culturale"@it , "oggetto"@it , "pubblico"@it , "sito"@it ;
+	:lemma "archeologico"@it , "bene"@it ;
+	:sinonimo "archeologia"@it , "archeologico"@it , "bene"@it , "cosa"@it , "patrimonio"@it , "possedimento"@it , "proprietà"@it ;
+	rdfs:comment "Oggetti e siti di rilevanza archeologica, di proprietà pubblica, tutelati in quanto beni culturali."@it ;
+	rdfs:label "Beni Archeologici"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Architettonici
+
+:Beni_Architettonici a owl:Class ;
+	rdfs:subClassOf :Beni_Culturali , :Caratteristiche_Geometriche ;
+	:colore "790000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "architettonico"@it , "artistico"@it , "storico"@it ;
+	:lemma "architettonico"@it , "bene"@it ;
+	:sinonimo "architettonico"@it , "bene"@it , "cosa"@it , "patrimonio"@it ;
+	rdfs:comment "Emergenze architettoniche rilevanti per i riferimenti artistici e/o storici"@it ;
+	rdfs:label "Beni Architettonici"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Culturali
+
+:Beni_Culturali a owl:Class ;
+	rdfs:subClassOf :Artificiale , :Beni_Paesaggistici , :Edificato ;
+	:keyword "artistico"@it , "culturale"@it , "immobile"@it , "mobile"@it , "storico"@it , "umanità"@it , "valore"@it ;
+	:lemma "bene"@it , "culturale"@it ;
+	:sinonimo "bene"@it , "cosa"@it , "culturale"@it , "patrimonio"@it , "proprietà"@it , "ricchezza"@it ;
+	rdfs:comment "Beni mobili e immobili costituenti espressione dei valori storici, culturali, artistici dell’umanità."@it ;
+	rdfs:label "Beni Culturali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Naturali
+
+:Beni_Naturali a owl:Class ;
+	rdfs:subClassOf :Beni_Paesaggistici , :Naturale .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Paesaggistici
+
+:Beni_Paesaggistici a owl:Class .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Urbanistici
+
+:Beni_Urbanistici a owl:Class ;
+	rdfs:subClassOf :Beni_Culturali , :Caratteristiche_Geometriche ;
+	:colore "7a0026" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "artistico"@it , "storico"@it , "urbano"@it ;
+	:lemma "bene"@it , "urbanistico"@it ;
+	:sinonimo "bene"@it , "cosa"@it , "patrimonio"@it , "possedimento"@it , "proprietà"@it , "urbanistico"@it , "urbano"@it ;
+	rdfs:comment "Complessi urbani di importanza storico artistica."@it ;
+	rdfs:label "Beni Urbanistici"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Biblioteche
+
+:Biblioteche a owl:Class ;
+	rdfs:subClassOf :Beni_Architettonici , :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "241d8b" ;
+	:commonDefinition "Una biblioteca è un servizio finalizzato a soddisfare bisogni informativi quali studio, aggiornamento professionale o di svago di una utenza finale individuata secondo parametri predefiniti, realizzato sulla base di una raccolta organizzata di supporti delle informazioni, fisici o digitali."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "aggiornamento"@it , "bisogno informativo"@it , "consultazione"@it , "custodia"@it , "digitale"@it , "fisico"@it , "informazione"@it , "libro"@it , "luogo"@it , "raccolta"@it , "studio"@it , "svago"@it ;
+	:lemma "biblioteca"@it ;
+	:sinonimo "biblioteca"@it , "biblioteca_civica"@it , "biblioteca_comunale"@it , "biblioteca_di_ricerca"@it , "mediateca"@it , "raccolta"@it ;
+	rdfs:comment "Luogo adibito alla custodia e consultazione di raccolte ordinate di libri di vario genere e destinazione."@it ;
+	rdfs:label "Biblioteche"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Caratteristiche_Geometriche
+
+:Caratteristiche_Geometriche a owl:Class ;
+	rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Centri_Commerciali
+
+:Centri_Commerciali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "5674b9" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attività"@it , "commerciale"@it ;
+	:lemma "centro"@it , "commerciale"@it ;
+	:sinonimo "centro"@it , "centro_commerciale"@it , "complesso_commerciale"@it , "grande_magazzino"@it , "shopping_center"@it , "zona_commerciale"@it ;
+	rdfs:comment "Complesso edilizio in cui si concentrano diverse attività commerciali."@it ;
+	rdfs:label "Centri Commerciali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Centri_Per_Infanzia
+
+:Centri_Per_Infanzia a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "f5989d" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "bambino"@it , "educativo"@it , "struttura"@it ;
+	:lemma "centro"@it , "infanzia"@it ;
+	:sinonimo "centro"@it , "infanzia"@it ;
+	rdfs:comment "Struttura educativa destinata ai bambini." ;
+	rdfs:label "Centri Per L'Infanzia"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Centri_Storici
+
+:Centri_Storici a owl:Class ;
+	rdfs:subClassOf :Beni_Urbanistici , :Caratteristiche_Geometriche , :Edificato ;
+	:colore "f26522" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "abitato"@it , "antico"@it , "architettonico"@it , "artistico"@it , "culturale"@it , "storico"@it ;
+	:lemma "centro"@it , "storico"@it ;
+	:sinonimo "centro"@it , "storico"@it ;
+	rdfs:comment "Parte originaria dell’abitato, di antica formazione, caratterizzata da valori architettonici, sociali, storici e artistici di insieme, anche in assenza di elementi monumentali di particolare rilievo. Costituisce un'unità culturale per i suoi pregi e le sue caratteristiche morfologiche, tipologiche e architettoniche."@it ;
+	rdfs:label "Centri Storici"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Cinema
+
+:Cinema a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "630460" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "film"@it , "sala"@it ;
+	:lemma "cinema"@it ;
+	:sinonimo "cinema"@it , "cinema-teatro"@it , "cinematografica"@it , "cinematografico"@it , "cinematografo"@it , "film"@it , "grande_schermo"@it , "pellicola"@it , "sala_cinematografica"@it , "sale_cinematografiche"@it , "schermo"@it ;
+	rdfs:comment "Sala predisposta per la proiezione di film."@it ;
+	rdfs:label "Cinema"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Condividi_Le_Tue_Emozioni
+
+:Condividi_Le_Tue_Emozioni a owl:Class ;
+	rdfs:subClassOf :Segnalazioni ;
+	rdfs:label "Condividi Le Tue Emozioni"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Contatti
+
+:Contatti a owl:Class ;
+	rdfs:subClassOf :Condividi_Le_Tue_Emozioni ;
+	rdfs:label "Contatti"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Contratto_Di_Fiume
+
+:Contratto_Di_Fiume a owl:Class ;
+	rdfs:subClassOf :Riferimenti_Normativi ;
+	:keyword "bacino"@it , "corso d'acqua"@it , "giuridico"@it , "protocollo"@it , "rigenerazione"@it ;
+	:lemma "contratto"@it , "fiume"@it ;
+	:sinonimo "accordo_contrattuale"@it , "atto"@it , "co-pianificazione"@it , "contratto"@it , "contratto_di_fiume"@it , "corso_d'acqua"@it , "fiume"@it , "flusso"@it , "fluviale"@it , "negoziale"@it , "partecipato"@it , "partecipazione"@it , "programmazione"@it , "protocollo"@it , "rigenerazione"@it ;
+	rdfs:comment "Protocollo giuridico per la rigenerazione ambientale del bacino idrografico di un corso d'acqua."@it ;
+	rdfs:label "Contratto Di Fiume"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Corona_Verde
+
+:Corona_Verde a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Cosa_Vorresti_Cambiare
+
+:Cosa_Vorresti_Cambiare a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "Cosa Vorresti Cambiare"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Cosa_Vorresti_Condividere
+
+:Cosa_Vorresti_Condividere a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "Cosa Vorresti Condividere"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Cosa_Vorresti_Organizzare
+
+:Cosa_Vorresti_Organizzare a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "Cosa Vorresti Organizzare"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Dove_Non_Ti_Piace_Stare
+
+:Dove_Non_Ti_Piace_Stare a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "Dove Non Ti Piace Stare"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Dove_Ti_Piace_Stare
+
+:Dove_Ti_Piace_Stare a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "Dove Ti Piace Stare"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Edificato
+
+:Edificato a owl:Class ;
+	rdfs:subClassOf :Artificiale ;
+	:commonDefinition "L’edificato è ciò che nei termini dell’urbanistica concerne l’insieme degli edifici, cioè l’insieme di tutte le opere in muratura create dall’uomo."@it ;
+	:keyword "commerciale"@it , "costruzione"@it , "edificio"@it , "muratura"@it , "produttivo"@it , "residenziale"@it , "terziario"@it ;
+	:lemma "edificato"@it ;
+	:sinonimo "costruire"@it , "edificare"@it , "fabbricare"@it , "produrre"@it ;
+	rdfs:comment "Complesso di costruzioni adibite ad usi diversi, residenziale, commerciale, terziario, produttivo."@it ;
+	rdfs:label "Edificato"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Farmacie
+
+:Farmacie a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "00a651" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "farmaco"@it , "locale"@it ;
+	:lemma "farmacia"@it ;
+	:sinonimo "farmacia"@it , "farmacie"@it ;
+	rdfs:comment "Locale destinato alla vendita dei farmaci."@it ;
+	rdfs:label "Farmacie"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Fattorie_Didattiche
+
+:Fattorie_Didattiche a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "ec008c" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "accoglienza"@it , "agrario"@it , "agrituristico"@it , "attività"@it , "azienda"@it , "educazione"@it , "scolastico"@it ;
+	:lemma "didattico"@it , "fattoria"@it ;
+	:sinonimo "allevamento"@it , "azienda"@it , "aziende_agricole"@it , "cascina"@it , "didattico"@it , "fattoria"@it , "masseria"@it , "podere"@it , "tenuta_agricola"@it ;
+	rdfs:comment "Aziende agrarie o agrituristiche nelle quali viene svolta attività di accoglienza ed educazione di gruppi scolastici e nelle quali viene offerta l'opportunità di conoscere le attività dell'azienda."@it ;
+	rdfs:label "Fattorie Didattiche"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Fermate_Trasporto_Pubblico
+
+:Fermate_Trasporto_Pubblico a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	<http://purl.org/dc/terms/publisher> "pubblico"@it ;
+	:colore "9e005d" ;
+	:commonDefinition "La pensilina è un'infrastruttura accessoria caratteristica di varie tipologie di trasporto, specialmente ferroviario e stradale; è costruita allo scopo di fornire un riparo dalle intemperie ai viaggiatori in attesa nelle fermate e nelle stazioni."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attesa"@it , "discesa"@it , "mezzo"@it , "passeggeri"@it , "pensilina"@it , "pubblico"@it , "riparo"@it , "salita"@it , "sosta"@it , "trasporto"@it , "viaggiatore"@it ;
+	:lemma "fermata"@it , "pubblico"@it , "trasporto"@it ;
+	:sinonimo "fermata"@it , "fermata_d'autobus"@it , "fermate_dell'autobus"@it , "infrastrutture_di_trasporto"@it , "mezzo_di_trasporto"@it , "mezzo_pubblico"@it , "pensilina"@it , "pubblico"@it , "settore_dei_trasporti"@it , "stazione"@it , "trasporto"@it , "trasporto_pubblico"@it ;
+	rdfs:comment "Luogo coperto o scoperto in cui i mezzi di trasporto pubblico effettuano una breve sosta per consentire la salita e la discesa dei passeggeri."@it ;
+	rdfs:label "Fermate Trasporto Pubblico"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Fiumi
+
+:Fiumi a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Caratteristiche_Geometriche ;
+	:colore "6dcff6" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "corso d'acqua"@it , "falda idrica sotterranea"@it , "ghiacciaio"@it , "neve"@it , "pioggia"@it , "precipitazione"@it , "sotterraneo"@it , "superficie"@it ;
+	:lemma "fiume"@it ;
+	:sinonimo "alveo"@it , "corso_d'acqua"@it , "fiume"@it , "fluviale"@it , "rivo"@it ;
+	rdfs:comment "Corso d’acqua perenne che scorre principalmente in superficie, ma che può essere parzialmente sotterraneo; può essere alimentato dalle precipitazioni piovose, dallo scioglimento di nevi o ghiacciai o dalle falde idriche sotterranee."@it ;
+	rdfs:label "Fiumi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#I_Margini_Della_Città
+
+:I_Margini_Della_Città a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "I Margini Della Città"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#I_Miei_Percorsi_Preferiti
+
+:I_Miei_Percorsi_Preferiti a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "I Miei Percorsi Preferiti"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#I_Miei_Punti_Di_Riferimento
+
+:I_Miei_Punti_Di_Riferimento a owl:Class ;
+	rdfs:subClassOf :Il_Territorio_Dal_tuo_Punto_Di_Vista ;
+	rdfs:label "I Miei Punti DI Riferimento"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Il_Territorio_Dal_tuo_Punto_Di_Vista
+
+:Il_Territorio_Dal_tuo_Punto_Di_Vista a owl:Class ;
+	rdfs:subClassOf :Segnalazioni ;
+	rdfs:label "Il Territorio Dal Tuo Punto Di Vista"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Imbarchi
+
+:Imbarchi a owl:Class ;
+	rdfs:subClassOf :Artificiale , :Caratteristiche_Geometriche ;
+	:colore "005b7f" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attraccare"@it , "banchina"@it , "imbarcare"@it , "merce"@it , "passeggero"@it , "traghetto"@it ;
+	:lemma "imbarco"@it ;
+	:sinonimo "imbarcare"@it ;
+	rdfs:comment "Banchina a cui attraccano i traghetti per imbarcare passeggeri e merci."@it ;
+	rdfs:label "Imbarchi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Infrastrutture
+
+:Infrastrutture a owl:Class ;
+	rdfs:subClassOf :Artificiale .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Itinerari_Turistici
+
+:Itinerari_Turistici a owl:Class ;
+	rdfs:subClassOf :Beni_Paesaggistici , :Caratteristiche_Geometriche , :Infrastrutture ;
+	:colore "754c24" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attrazione"@it , "paessaggistico"@it , "pedonale"@it , "percorso"@it ;
+	:lemma "itinerario"@it , "turistico"@it ;
+	:sinonimo "attrazione"@it , "itinerario"@it , "piano_di_viaggio"@it , "turismo"@it , "turista"@it , "turistica"@it , "turistico"@it ;
+	rdfs:comment "Percorsi pedonali che intersecano attrazioni paesaggistiche e culturali."@it ;
+	rdfs:label "Itinerari Turistici"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Laghi
+
+:Laghi a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Caratteristiche_Geometriche ;
+	:colore "6dcff6" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "dolce"@it , "massa d'acqua"@it ;
+	:lemma "lago"@it ;
+	:sinonimo "bacino_lacustre"@it , "lacustre"@it , "lago"@it , "specchio_d'acqua"@it ;
+	rdfs:comment "Massa d'acqua, di solito, ma non necessariamente, fresca e dolce, da cui è escluso il mare."@it ;
+	rdfs:label "Laghi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Linee_Ferroviarie
+
+:Linee_Ferroviarie a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Sistemi_Di_Trasporto ;
+	:colore "ff0000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "binario"@it , "percorso"@it , "treno"@it ;
+	:lemma "ferroviario"@it , "linea"@it ;
+	:sinonimo "ferrovia"@it , "ferroviarie"@it , "infrastruttura_ferroviaria"@it , "linea"@it , "linea_ferroviaria"@it , "rete_ferroviaria"@it , "strada_ferrata"@it ;
+	rdfs:comment "Percorso costituito da binari su cui circolano i treni."@it ;
+	rdfs:label "Linee Ferroviarie"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Luoghi_Di_Culto
+
+:Luoghi_Di_Culto a owl:Class ;
+	rdfs:subClassOf :Beni_Architettonici , :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "754c24" ;
+	:commonDefinition "Un luogo di culto è una struttura appositamente progettata o uno spazio consacrato in cui individui o gruppi di persone, come una congregazione, vengono a compiere atti di devozione, venerazione o di studio religioso."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "celebrare"@it , "congregazione"@it , "consacrato"@it , "devozione"@it , "edificio"@it , "orario"@it , "religioso"@it , "studio"@it , "venerazione"@it ;
+	:lemma "luogo di culto"@it ;
+	:sinonimo "adorazione"@it , "casa_di_culto"@it , "chiesa"@it , "culto"@it , "cultuale"@it , "cultus"@it , "divozione"@it , "fede"@it , "luoghi_di_culto"@it , "luogo"@it , "luogo_di_culto"@it , "professione_di_fede"@it , "religione"@it ;
+	rdfs:comment "Edificio, sovente di rilevanza storico-artistica, in cui si celebrano uno o più culti religiosi, talvolta accessibile con limitazioni di orario."@it ;
+	rdfs:label "Luoghi Di Culto"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Mercati
+
+:Mercati a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "f26522" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "aperto"@it , "commerciale"@it , "luogo"@it , "scambio"@it ;
+	:lemma "mercato"@it ;
+	:sinonimo "commercio"@it , "market"@it , "mercato"@it ;
+	rdfs:comment "Luogo, generalmente all'aperto deputato a scambi commerciali in tempi fissi."@it ;
+	rdfs:label "Mercati"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Monumenti_Naturali
+
+:Monumenti_Naturali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche ;
+	:colore "a67c52" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "conformazione"@it , "geologico"@it , "patrimonio dell'umanità"@it , "tempo"@it , "tradizione"@it ;
+	:lemma "monumento"@it , "naturale"@it ;
+	:sinonimo "memoriale"@it , "monumento"@it , "natura"@it , "naturale"@it , "naturalistico"@it ;
+	rdfs:comment "Conformazione geologica consacrata dal tempo e, talvolta, anche dalle tradizioni popolari , tali da renderlo patrimonio dell'umanità e quindi protetto secondo le normative vigenti del luogo"@it ;
+	rdfs:label "Monumenti Naturali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Musei
+
+:Musei a owl:Class ;
+	rdfs:subClassOf :Beni_Architettonici , :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "cabf2c" ;
+	:commonDefinition "Il museo è una raccolta, pubblica o privata, di oggetti relativi ad uno o più settori della cultura, della scienza e della tecnica."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "ambiente"@it , "cultura"@it , "culturale"@it , "esposizione"@it , "oggetto"@it , "opera d'arte"@it , "raccolta"@it , "scientifico"@it , "scienza"@it , "storico"@it , "tecnica"@it ;
+	:lemma "museo"@it ;
+	:sinonimo "museo"@it , "museo_archeologico"@it , "museo_di_storia"@it , "museo_scientifico"@it , "museo_statale"@it , "polo_museale"@it ;
+	rdfs:comment "Ambiente o complesso di ambienti adibiti alla raccolta e all'esposizione al pubblico di opere d'arte o di oggetti rari e di importanza storica, culturale, scientifica."@it ;
+	rdfs:label "Musei"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Naturale
+
+:Naturale a owl:Class ;
+	rdfs:subClassOf :Territorio ;
+	:keyword "ambiente"@it ;
+	:lemma "naturale"@it ;
+	:sinonimo "ambiente"@it , "natura"@it , "naturale"@it , "naturalistico"@it ;
+	rdfs:comment "Elementi che riguardano l’ambiente non artificiale."@it ;
+	rdfs:label "Naturale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Negozi
+
+:Negozi a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "7accc8" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "luogo"@it , "merce"@it , "merci"@it , "vendita"@it ;
+	:lemma "negozio"@it ;
+	:sinonimo "bottega"@it , "esercizio"@it , "esercizio_commerciale"@it , "negozio"@it , "spaccio"@it ;
+	rdfs:comment "Luogo coperto in cui si vendono merci al minuto."@it ;
+	rdfs:label "Negozi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Nuove_Fruizioni
+
+:Nuove_Fruizioni a owl:Class ;
+	rdfs:subClassOf :Artificiale ;
+	:keyword "collettività"@it , "recente"@it , "servizi"@it , "trasformazione"@it ;
+	:lemma "fruizione"@it , "nuovo"@it ;
+	:sinonimo "consumo"@it , "fruizione"@it , "godimento"@it , "nuovo"@it , "paesaggistico"@it , "recente"@it , "riuso"@it , "turismo"@it , "uso"@it ;
+	rdfs:comment "Edifici e aree di recente trasformazione in cui vengono creati nuovi servizi per la collettività, realizzati da enti pubblici, privati o dalla stessa collettività, per un periodo più o meno stabile."@it ;
+	rdfs:label "Nuove Fruizioni"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Ospedali
+
+:Ospedali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	<http://purl.org/dc/terms/publisher> "ospedale"@it ;
+	:colore "7da7d9" ;
+	:commonDefinition "Istituto pubblico o privato destinato al ricovero e alla cura medica o chirurgica di quanti necessitano di assistenza sanitaria."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "ammalato"@it , "assistenza"@it , "chirurgico"@it , "cura"@it , "ferito"@it , "medico"@it , "ricovero"@it , "sanitario"@it ;
+	:lemma "ospedale"@it ;
+	:sinonimo "clinica"@it , "infermeria"@it , "ospedale"@it , "ospedaliero"@it ;
+	rdfs:comment "Edificio destinato alla cura e all'assistenza di ammalati e feriti."@it ;
+	rdfs:label "Ospedali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PAI
+
+:PAI a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PPR
+
+:PPR a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PRGC
+
+:PRGC a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi ;
+	:colore "ff0000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "comunale"@it , "generale"@it , "piano"@it , "regolatore"@it ;
+	:lemma "prgc"@it ;
+	rdfs:comment "Piano Regolatore Generale Comunale"@it ;
+	rdfs:label "PRGC"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PTCP
+
+:PTCP a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PTR
+
+:PTR a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PUM
+
+:PUM a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi ;
+	:colore "ff0000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "mobilità"@it , "piano"@it , "urbano"@it ;
+	:lemma "pum"@it ;
+	rdfs:comment "Piano Urbano della Mobilità"@it ;
+	rdfs:label "PUM"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PUT
+
+:PUT a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi ;
+	:colore "ff0000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "piano"@it , "traffico"@it , "urbano"@it ;
+	:lemma "put"@it ;
+	rdfs:comment "Piano del Traffico Urbano"@it ;
+	rdfs:label "PUT"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Parcheggi
+
+:Parcheggi a owl:Class ;
+	rdfs:subClassOf :Artificiale , :Caratteristiche_Geometriche ;
+	:colore "0000ff" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "bicicletta"@it , "sosta"@it , "veicolo"@it , "zona"@it ;
+	:lemma "parcheggio"@it ;
+	:sinonimo "autoparcheggio"@it , "autoparco"@it , "autorimessa"@it , "garage"@it , "multipiano_parcheggio"@it , "parcheggio"@it , "parcheggio_per_automobili"@it , "parcheggio_sotterraneo"@it , "posteggio"@it , "struttura_di_parcheggio"@it , "struttura_parcheggio"@it ;
+	rdfs:comment "Zone scoperte o coperte adibite alla sosta di veicoli e bibiclette."@it ;
+	rdfs:label "Parcheggi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Parchi_Nazionali
+
+:Parchi_Nazionali a owl:Class ;
+	rdfs:subClassOf :Aree_Protette , :Caratteristiche_Geometriche ;
+	:commonDefinition "Il Parco Nazionale è un territorio protetto, dichiarato tale da una Nazione, che viene preservato e tutelato con norme specifiche dallo sviluppo umano e dall’inquinamento. Esso comprende aree terrestri, marine, fluviali o lacustri che contengano un insieme di ecosistemi intatti, o solo parzialmente alterati dall’uomo."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "conservazine"@it , "ecosistema"@it , "fluviale"@it , "lacustre"@it , "marino"@it , "nazione"@it , "parco"@it , "protetto"@it , "terrestre"@it , "territorio"@it ;
+	:lemma "nazionale"@it , "parco"@it ;
+	:sinonimo "nazionale"@it , "parco"@it , "parco_naturale"@it , "parco_nazionale"@it ;
+	rdfs:comment "Aree naturali protette terrestri, marine, fluviali o lacustri che contengano uno o più ecosistemi intatti (o solo parzialmente alterati da interventi antropici) e/o una o più formazioni fisiche, geologiche, geomorfologiche,biologiche d'interesse nazionale od internazionale, per valori naturalistici, scientifici, culturali, estetici, educativi o ricreativi, tali da giustificare l'intervento dello Stato per la loro conservazione."@it ;
+	rdfs:label "Parchi Nazionali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Parchi_Regionali
+
+:Parchi_Regionali a owl:Class ;
+	rdfs:subClassOf :Aree_Protette , :Caratteristiche_Geometriche ;
+	:commonDefinition "Il Parco regionale è un territorio protetto, dichiarato tale da una Regione, che viene preservato e tutelato con norme specifiche dallo sviluppo umano e dall’inquinamento. Esso comprende aree terrestri, marine, fluviali o lacustri che contengano un insieme di ecosistemi intatti, o solo parzialmente alterati dall’uomo."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "ecosistema"@it , "fluviale"@it , "lacustre"@it , "marino"@it , "protetto"@it , "regione"@it , "terrestre"@it , "territorio"@it ;
+	:lemma "parco"@it , "regionale"@it ;
+	:sinonimo "parco"@it , "parco_naturale"@it , "regionale"@it ;
+	rdfs:comment "Aree terrestri, fluviali, lacustri ed eventualmente da tratti di mare prospicienti la costa, di valore ambientale e naturalistico, che costituiscano, nell'ambito di una o più regioni adiacenti, un sistema omogeneo, individuato dagli assetti naturalistici dei luoghi, dai valori paesaggistici e artistici e dalle tradizioni culturali delle popolazioni locali."@it ;
+	rdfs:label "Parchi Regionali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Parchi_Urbani
+
+:Parchi_Urbani a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Verde_Attrezzato ;
+	:colore "46a674" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "verde"@it , "zona"@it ;
+	:lemma "parco"@it , "urbano"@it ;
+	:sinonimo "metropolitano"@it , "parco_naturale"@it , "parco_pubblico"@it , "urbanistico"@it , "urbano"@it ;
+	rdfs:comment "Zone verdi ben coltivate e ordinate, talvolta accessibili con limitazioni di orario."@it ;
+	rdfs:label "Parchi Urbani"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Percorsi_Pedonali
+
+:Percorsi_Pedonali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Infrastrutture ;
+	:colore "46a674" ;
+	:commonDefinition "I percorsi pedonali sono i percorsi destinati al solo transito delle persone e generalmente esclusi al traffico di altri veicoli (auto, biciclette, …). Appartengono alla categoria dei percorsi pedonali anche i sentieri, gli itinerari urbani o extraurbani, in cui siano stati eliminati gli ostacoli o i pericoli derivanti dal passaggio di altri mezzi di trasporto."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "itinerario"@it , "persona"@it , "sentiero"@it , "transito"@it ;
+	:lemma "pedonale"@it , "percorso"@it ;
+	:sinonimo "percorso"@it , "tragitto"@it ;
+	rdfs:comment "Porzioni di territorio intensamente sfruttate o urbanizzate oggetto di misure di conservazione e recupero."@it ;
+	rdfs:label "Percorsi Pedonali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Piste_Ciclabili
+
+:Piste_Ciclabili a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Infrastrutture ;
+	:colore "790000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "bicicletta"@it , "percorso"@it ;
+	:lemma "ciclabile"@it , "pista"@it ;
+	:sinonimo "ciclabile"@it , "ciclopista"@it , "ciclovia"@it , "circuito"@it , "corsia_ciclabile"@it , "pista_ciclabile"@it ;
+	rdfs:comment "Percorso protetto riservato alle biciclette."@it ;
+	rdfs:label "Piste Ciclabili"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Polizia
+
+:Polizia a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "448ccb" ;
+	:commonDefinition """Con la locuzione pubblica sicurezza, in riferimento alle attività di governo statale, a livello centrale e locale, si indica il complesso di apparati, autorità e strutture preposte alla tutela dell'ordine pubblico e all'incolumità delle persone.
+Il termine pubblica sicurezza indica generalmente l’insieme degli apparati, dell’autorità e delle strutture preposte alla tutela dell’ordine pubblico e all’incolumità delle persone. La pubblica sicurezza riguarda perciò tanto le attività di polizia, volte ad assicurare la “sicurezza” attraverso il rispetto delle norme di legge, quanto quelle attività finalizzate a prevenire che la comunità possa subire danni da eventi fortuiti o accidentali (ad esempio, infortuni, disastri naturali o climatici), o comunque a prevenirne il danno attraverso l’organizzazione di forme di prevenzione e di soccorso."""@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "apparato"@it , "autorità"@it , "carabiniere"@it , "incolumità"@it , "legge"@it , "norma"@it , "ordine"@it , "polizia"@it , "prevenzione"@it , "sicurezza"@it , "soccorso"@it , "tutela"@it ;
+	:lemma "pubblica"@it , "sicurezza"@it ;
+	:sinonimo "protezione"@it , "pubblica_sicurezza"@it , "pubblico"@it , "sicurezza"@it , "sicurezza_pubblica"@it ;
+	rdfs:comment "Complesso delle attività istituzionali di gestione delle comunità umane organizzate."@it ;
+	rdfs:label "Pubblica Sicurezza"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Postazioni_Bike_Sharing
+
+:Postazioni_Bike_Sharing a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Sistemi_Di_Trasporto ;
+	:colore "790000" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "bicicletta"@it , "comunale"@it , "distribuzione"@it , "quota associativa"@it , "tariffa"@it , "utilizzo"@it ;
+	:lemma "bike"@it , "postazione"@it , "sharing"@it ;
+	:sinonimo "bici"@it , "bicicletta"@it , "bike"@it , "piazzola"@it , "postazione"@it , "trasporto_in_bicicletta"@it , "velocifero"@it ;
+	rdfs:comment "Parco di biciclette di proprietà comunale, delle quali si può usufruire dietro pagamento di una quota associativa e di una tariffa oraria, con l'obbligo di riconsegnarle, al termine dell'utilizzo, presso uno qualsiasi dei vari punti di distribuzione."@it ;
+	rdfs:label "Postazioni Bike Sharing"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Postazioni_Car_Sharing
+
+:Postazioni_Car_Sharing a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Sistemi_Di_Trasporto ;
+	:colore "534741" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "automobile"@it , "pagamento"@it , "prenotazione"@it ;
+	:lemma "car"@it , "postazione"@it , "sharing"@it ;
+	:sinonimo "auto_condivisa"@it , "car-sharing"@it , "car_sharing"@it , "condivisione_dell'automobile"@it , "piazzola"@it , "postazione"@it ;
+	rdfs:comment "Servizio che permette di utilizzare un'automobile su prenotazione, prelevandola e riportandola in un parcheggio e pagando in ragione dell'utilizzo fatto."@it ;
+	rdfs:label "Postazioni Car Sharing"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Poste
+
+:Poste a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "fff200" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "corrispondenza"@it , "inoltro"@it , "pacco"@it , "recapito"@it , "servizio"@it ;
+	:lemma "posta"@it ;
+	:sinonimo "amministrazione_autonoma_delle_poste_e_telecomunicazioni"@it , "consegna_della_posta"@it , "corrispondenza"@it , "posta"@it , "postale"@it , "poste"@it , "poste_e_telegrafi"@it , "poste_italiane"@it , "servizio_di_posta"@it , "servizio_postale"@it , "sistema_postale"@it , "ufficio_postale"@it ;
+	rdfs:comment "Servizio pubblico che provvede all'inoltro e al recapito di corrispondenza, pacchi."@it ;
+	rdfs:label "Poste"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Prospettive_E_Colori
+
+:Prospettive_E_Colori a owl:Class ;
+	rdfs:subClassOf :Condividi_Le_Tue_Emozioni ;
+	rdfs:label "Prospettive E Colori"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Provenance
+
+:Provenance a owl:Class .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Rete_Ecologica
+
+:Rete_Ecologica a owl:Class ;
+	rdfs:subClassOf :Beni_Naturali , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Rete_Natura_2000
+
+:Rete_Natura_2000 a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Riferimenti_Normativi .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Revision
+
+:Revision a owl:Class .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Riferimenti_Normativi
+
+:Riferimenti_Normativi a owl:Class ;
+	:colore "ff0000" ;
+	:keyword "legislativo"@it , "ordinamento giuridico"@it ;
+	:lemma "normativo"@it , "riferimento"@it ;
+	:sinonimo "normativo"@it , "riferimento"@it ;
+	rdfs:comment "Precetti legislativi, aventi la capacità di determinare l'ordinamento giuridico generale."@it ;
+	rdfs:label "Riferimenti Normativi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Ristorazione
+
+:Ristorazione a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "440e62" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "attività"@it , "distribuzione"@it , "esercizio"@it , "pasto"@it , "preparazione"@it ;
+	:lemma "ristorazione"@it ;
+	:sinonimo "catering"@it , "ristorante"@it , "ristorazione"@it ;
+	rdfs:comment "Attività che ha come oggetto la preparazione e la distribuzione dei pasti in esercizi pubblici o privati."@it ;
+	rdfs:label "Ristorazione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#SIC
+
+:SIC a owl:Class ;
+	rdfs:subClassOf :Aree_Protette ;
+	:keyword "comunitario"@it , "interesse"@it , "sito"@it ;
+	:lemma "sic"@it ;
+	rdfs:comment "Sito di interesse comunitario."@it ;
+	rdfs:label "SIC"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#SIR
+
+:SIR a owl:Class ;
+	rdfs:subClassOf :Aree_Protette ;
+	:keyword "ecologica"@it , "regionale"@it , "rete"@it , "siti"@it ;
+	:lemma "sir"@it ;
+	rdfs:comment "Elenco completo dei siti della rete ecologica regionale."@it ;
+	rdfs:label "SIR"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Sapori
+
+:Sapori a owl:Class ;
+	rdfs:subClassOf :Condividi_Le_Tue_Emozioni ;
+	rdfs:label "Sapori"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Scuole
+
+:Scuole a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "f57d38" ;
+	:commonDefinition "Istituzione organizzata per l'istruzione collettiva della gioventù o per la preparazione specifica degli allievi in una determinata disciplina, arte o professione."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "allievo"@it , "arte"@it , "disciplina"@it , "educazione"@it , "gioventù"@it , "istituzione"@it , "istruzione"@it , "preparazione"@it , "professione"@it ;
+	:lemma "scuola"@it ;
+	:sinonimo "accademia"@it , "istituto"@it , "scuola"@it , "università"@it ;
+	rdfs:comment "Istituzione destinata all'educazione e all'istruzione."@it ;
+	rdfs:label "Scuole"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Segnalazioni
+
+:Segnalazioni a owl:Class ;
+	rdfs:comment "Condivisioni pubbliche di opinioni, idee e giudizi."@it ;
+	rdfs:label "Segnalazioni"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Sentieri_Naturali
+
+:Sentieri_Naturali a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Infrastrutture , :Verde_Attrezzato ;
+	:colore "005826" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "naturale"@it , "percorso"@it ;
+	:lemma "naturale"@it , "sentiero"@it ;
+	:sinonimo "ambiente"@it , "natura"@it , "naturale"@it , "naturalistico"@it , "sentieristica"@it , "sentiero"@it , "stradina"@it ;
+	rdfs:comment "Percorso stretto a fondo naturale, il cui uso è interdetto ai veicoli."@it ;
+	rdfs:label "Sentieri Naturali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Servizi
+
+:Servizi a owl:Class ;
+	rdfs:subClassOf :Edificato ;
+	:keyword "attività"@it , "esigenza"@it , "privato"@it , "pubblica amministrazione"@it ;
+	:lemma "servizio"@it ;
+	:sinonimo "servizio"@it , "settore_dei_servizi"@it , "settore_terziario"@it , "terziario"@it ;
+	rdfs:comment "Insieme di attività di vario tipo fornite dalla pubblica amministrazione o da privati per rispondere alle esigenze dell’utenza."@it ;
+	rdfs:label "Servizi"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Servizi_Privati
+
+:Servizi_Privati a owl:Class ;
+	rdfs:subClassOf :Servizi ;
+	:keyword "attività"@it , "esigenza"@it , "privati"@it ;
+	:lemma "privato"@it , "servizio"@it ;
+	:sinonimo "privati"@it , "privato"@it , "servizio"@it , "settore_dei_servizi"@it , "settore_terziario"@it , "terziario"@it ;
+	rdfs:comment "Insieme di attività di vario tipo fornite da privati per rispondere alle esigenze dell’utenza."@it ;
+	rdfs:label "Servizi Privati"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Servizi_Pubblici
+
+:Servizi_Pubblici a owl:Class ;
+	rdfs:subClassOf :Servizi ;
+	:keyword "attività"@it , "esigenze"@it , "pubblica ammistrazione"@it ;
+	:lemma "pubblico"@it , "servizio"@it ;
+	:sinonimo "pubblico"@it , "servizio"@it , "servizio_pubblico"@it , "settore_dei_servizi"@it , "settore_terziario"@it , "terziario"@it ;
+	rdfs:comment "Insieme di attività di vario tipo fornite dalla pubblica amministrazione per rispondere alle esigenze dell’utenza."@it ;
+	rdfs:label "Servizi Pubblici"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Sistemi_Di_Trasporto
+
+:Sistemi_Di_Trasporto a owl:Class ;
+	rdfs:subClassOf :Infrastrutture ;
+	:keyword "accessibilità"@it , "infrastruttura"@it , "veicolare"@it ;
+	:lemma "sistema"@it , "trasporto"@it ;
+	:sinonimo "infrastrutture_di_trasporto"@it , "mezzi_pubblici"@it , "mezzo_di_trasporto"@it , "mezzo_pubblico"@it , "modalità_di_trasporto"@it , "modo_di_trasporto"@it , "settore_dei_trasporti"@it , "sistema"@it , "sistema_di_trasporto"@it , "sistemi"@it , "trasporto"@it , "trasporto_dei_passeggeri"@it , "trasporto_di_massa"@it , "trasporto_passeggeri"@it , "trasporto_pubblico"@it , "veicolo"@it , "vettura"@it ;
+	rdfs:comment "Reti di infrastrutture per l’accessibilità veicolare."@it ;
+	rdfs:label "Sistemi Di Trasporto"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Spazi_Di_Condivisione
+
+:Spazi_Di_Condivisione a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Nuove_Fruizioni ;
+	:colore "00a99d" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "aggregazione"@it , "area"@it , "edificio"@it , "multifunzionale"@it , "sociale"@it ;
+	:lemma "condivisione"@it , "spazio"@it ;
+	:sinonimo "comunione"@it , "condivisione"@it , "spazio"@it ;
+	rdfs:comment "Edifici o aree multifunzionali. Nuovi luoghi di aggregazione sociale."@it ;
+	rdfs:label "Spazi Di Condivisione"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Spazi_Di_Riuso
+
+:Spazi_Di_Riuso a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Nuove_Fruizioni ;
+	:colore "fff568" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "aggregazione"@it , "area"@it , "cittadinanza"@it , "edificio"@it , "riappropriazione"@it , "sociale"@it ;
+	:lemma "riuso"@it , "spazio"@it ;
+	:sinonimo "riuso"@it , "spazio"@it ;
+	rdfs:comment "Edifici o aree oggetto di riappropriazione da parte della cittadinanza. Nuovi luoghi di aggregazione sociale."@it ;
+	rdfs:label "Spazi Di Riuso"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Spazi_Di_Riuso_Temporaneo
+
+:Spazi_Di_Riuso_Temporaneo a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Nuove_Fruizioni ;
+	:colore "fff200" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "area"@it , "edificio"@it , "riconversione"@it , "riqualificazione"@it , "tempo determinato"@it ;
+	:lemma "riuso"@it , "spazio"@it , "temporaneo"@it ;
+	:sinonimo "breve"@it , "momentaneo"@it , "occasionale"@it , "provvisorio"@it , "riuso"@it , "spazio"@it , "temporaneo"@it , "transitorio"@it ;
+	rdfs:comment "Edifici o aree oggetto di progetti di riqualificazione e riconversione a tempo determinato."@it ;
+	rdfs:label "Spazi Di Riuso Temporaneo"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Spazi_Riutilizzati
+
+:Spazi_Riutilizzati a owl:Class ;
+	rdfs:subClassOf :Aree_Di_Progetto , :Caratteristiche_Geometriche ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "area"@it , "edificio"@it , "riconversione"@it , "riqualificazione"@it ;
+	:lemma "riutilizzato"@it , "spazio"@it ;
+	:sinonimo "ambientale"@it , "recuperato"@it , "restauro"@it , "rinaturalizzato"@it , "ristrutturato"@it , "spazio"@it ;
+	rdfs:comment "Edifici o aree oggetto di progetti di riqualificazione e riconversione, da parte della pubblica amministrazione, di privati o della collettività."@it ;
+	rdfs:label "Spazi Riutilizzati"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Stato
+
+:Stato a owl:Class ;
+	:keyword "area"@it , "condizione"@it , "immobile"@it ;
+	:lemma "stato"@it ;
+	:sinonimo "condizione"@it , "stato"@it ;
+	rdfs:comment "Condizione in cui verte un immobile o un’area."@it ;
+	rdfs:label "Stato"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Stazioni_Ferroviarie
+
+:Stazioni_Ferroviarie a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Pubblici ;
+	:colore "ff0000" ;
+	:commonDefinition "Complesso di edifici e di impianti in cui si svolgono tutte le operazioni relative al movimento di merci e passeggeri."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "edificio"@it , "impianto"@it , "lasciare"@it , "merce"@it , "operazione"@it , "passeggero"@it , "raccogliere"@it , "treno"@it ;
+	:lemma "ferroviario"@it , "stazione"@it ;
+	:sinonimo "costruzioni_ferroviarie"@it , "deposito_ferroviario"@it , "fermata_ferroviaria"@it , "ferrovia"@it , "ferroviarie"@it , "ferrovie"@it , "infrastruttura_ferroviaria"@it , "stazione"@it , "stazione_dei_treni"@it , "stazione_ferroviaria"@it ;
+	rdfs:comment "Edificio posto lungo un percorso o una linea in cui i treni si fermano per raccogliere o lasciare i passeggeri o le merci."@it ;
+	rdfs:label "Stazioni Ferroviarie"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Strade_Comunali
+
+:Strade_Comunali a owl:Class ;
+	rdfs:subClassOf :Viabilità_Veicolare ;
+	:colore "736357" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "centro abitato"@it , "comune"@it , "extraurbano"@it , "strada"@it , "urbano"@it ;
+	:lemma "comunale"@it , "strada"@it ;
+	:sinonimo "comunale"@it , "strada"@it , "strade"@it , "via"@it ;
+	rdfs:comment "Strade gestite dal comune nel quale la strada si sviluppa. Possono svilupparsi all'interno dei nuclei o centri abitati ed essere quindi urbane o all'esterno dei nuclei o centri abitati ed essere quindi extraurbane."@it ;
+	rdfs:label "Strade Comunali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Strade_Locali
+
+:Strade_Locali a owl:Class ;
+	rdfs:subClassOf :Viabilità_Veicolare ;
+	:colore "998675" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "comunale"@it , "provinciale"@it , "strada"@it ;
+	:lemma "locale"@it , "strada"@it ;
+	:sinonimo "costruzione_di_strade"@it , "locale"@it , "strada"@it , "strade"@it , "via"@it ;
+	rdfs:comment "Strade con la medesima classificazione amministrativa di strada comunale. Se il centro abitato attraversato ha meno di 10.000 abitanti la strada è una strada provinciale."@it ;
+	rdfs:label "Strade Locali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Strade_Provinciali
+
+:Strade_Provinciali a owl:Class ;
+	rdfs:subClassOf :Viabilità_Veicolare ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "demanio"@it , "provincia"@it , "strada"@it ;
+	:lemma "provinciale"@it , "strada"@it ;
+	:sinonimo "area"@it , "provincia"@it , "strada"@it , "strada_provinciale"@it , "via"@it ;
+	rdfs:comment "Strada di proprietà del demanio e in gestione alla stessa provincia."@it ;
+	rdfs:label "Strade Provinciali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Strade_Statali
+
+:Strade_Statali a owl:Class ;
+	rdfs:subClassOf :Viabilità_Veicolare ;
+	:colore "362f2d" , "534741" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "banchina"@it , "carreggiata"@it , "unica"@it ;
+	:lemma "statale"@it , "strada"@it ;
+	:sinonimo "statale"@it , "strada"@it , "strada_nazionale"@it , "strada_statale"@it , "via"@it ;
+	rdfs:comment "Strada ad unica carreggiata con almeno una corsia per senso di marcia e banchine."@it ;
+	rdfs:label "Strade Statali"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Strutture_Ricettive
+
+:Strutture_Ricettive a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Servizi_Privati ;
+	:colore "ed145b" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "soggiornare"@it , "struttura"@it ;
+	:lemma "ricettivo"@it , "struttura"@it ;
+	:sinonimo "albergo"@it , "hotel"@it , "locanda"@it , "motel"@it , "ostello"@it , "osteria"@it , "recettivo"@it , "ricettivo"@it , "rifugio"@it , "ristorante"@it , "struttura"@it ;
+	rdfs:comment "Strutture in cui è possibile soggiornare."@it ;
+	rdfs:label "Strutture Ricettive"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Suoni
+
+:Suoni a owl:Class ;
+	rdfs:subClassOf :Condividi_Le_Tue_Emozioni ;
+	rdfs:label "Suoni"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Territorio
+
+:Territorio a owl:Class ;
+	:keyword "acqua"@it , "area"@it , "definito"@it , "delimitato"@it , "porzione"@it , "suolo"@it ;
+	:lemma "territorio"@it ;
+	:sinonimo "area"@it , "area_geografica"@it , "circondario"@it , "circoscrizione"@it , "recinto"@it , "regione"@it , "superficie"@it , "territorialità"@it , "territorio"@it ;
+	rdfs:comment "Area definita o delimitata che include porzioni di suolo o di acque."@it ;
+	rdfs:label "Territorio"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Trasporto_Pubblico_Locale
+
+:Trasporto_Pubblico_Locale a owl:Class ;
+	rdfs:subClassOf :Caratteristiche_Geometriche , :Sistemi_Di_Trasporto ;
+	<http://purl.org/dc/terms/publisher> "locale"@it ;
+	:colore "9e005d" ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "mezzo"@it , "pubblico"@it , "trasporto"@it ;
+	:lemma "pubblico"@it , "trasporto"@it ;
+	:sinonimo "infrastrutture_di_trasporto"@it , "locale"@it , "mezzo_di_trasporto"@it , "mezzo_pubblico"@it , "pubblico"@it , "settore_dei_trasporti"@it , "sistema_di_trasporto"@it , "trasporto"@it , "trasporto_dei_passeggeri"@it , "trasporto_di_massa"@it , "trasporto_passeggeri"@it , "trasporto_pubblico"@it , "trasporto_pubblico_locale"@it , "veicolo"@it ;
+	rdfs:comment "Itinerari percorsi dai mezzi di trasporto pubblici."@it ;
+	rdfs:label "Trasporto Pubblico Locale"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Verde_Attrezzato
+
+:Verde_Attrezzato a owl:Class ;
+	rdfs:subClassOf :Artificiale , :Beni_Naturali ;
+	:keyword "giardino"@it , "manutenzione"@it , "parco"@it , "prato"@it , "progettazione"@it ;
+	:lemma "attrezzato"@it , "verde"@it ;
+	:sinonimo "attrezzare"@it , "flora"@it , "vegetazione"@it , "verde"@it ;
+	rdfs:comment "Zone costituite da parchi, prati e giardini soggetta a progettazione e manutenzione."@it ;
+	rdfs:label "Verde Attrezzato"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Viabilità_Veicolare
+
+:Viabilità_Veicolare a owl:Class ;
+	rdfs:subClassOf :Infrastrutture ;
+	:keyword "autoveicoli"@it , "mobilità"@it , "rete"@it ;
+	:lemma "veicolare"@it , "viabilità"@it ;
+	:sinonimo "altavia"@it , "cammino"@it , "ferroviario"@it , "ippovia"@it , "itinerario"@it , "mulattiera"@it , "paesaggistico"@it , "percorso"@it , "rete_stradale"@it , "sentiero"@it , "strada"@it , "stradale"@it , "traffico"@it , "traffico_stradale"@it , "traffico_su_strada"@it , "veicolare"@it , "veicolo"@it , "veicolo_stradale"@it , "viabilità"@it ;
+	rdfs:comment "Complesso di reti per la mobilità degli autoveicoli."@it ;
+	rdfs:label "Viabilità Veicolare"@it .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#ZPS
+
+:ZPS a owl:Class ;
+	rdfs:subClassOf :Aree_Protette ;
+	:keyword "protezione"@it , "speciale"@it , "zona"@it ;
+	:lemma "zps"@it ;
+	rdfs:comment "Zona di Protezione Speciale."@it ;
+	rdfs:label "ZPS"@it .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Aree_Protette
+
+:Aree_Protette a owl:NamedIndividual , :Aree_Protette .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Naturali
+
+:Beni_Naturali a owl:NamedIndividual , :Beni_Naturali .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Beni_Paesaggistici
+
+:Beni_Paesaggistici a owl:NamedIndividual , :Beni_Paesaggistici .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Corona_Verde
+
+:Corona_Verde a owl:NamedIndividual ;
+	:ha_focus :Beni_Paesaggistici .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Dismesso
+
+:Dismesso a owl:NamedIndividual , :Stato .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#In_Abbandono
+
+:In_Abbandono a owl:NamedIndividual , :Stato .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#In_Uso
+
+:In_Uso a owl:NamedIndividual , :Stato .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Infrastrutture
+
+:Infrastrutture a owl:NamedIndividual , :Infrastrutture .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PAI
+
+:PAI a owl:NamedIndividual ;
+	:ha_focus :Beni_Naturali .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PPR
+
+:PPR a owl:NamedIndividual ;
+	:ha_focus :Beni_Paesaggistici .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PTCP
+
+:PTCP a owl:NamedIndividual , :PTCP .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#PTR
+
+:PTR a owl:NamedIndividual ;
+	:ha_focus :Infrastrutture .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Rete_Ecologica
+
+:Rete_Ecologica a owl:NamedIndividual , :Rete_Ecologica ;
+	:ha_rif_normativo :PPR , :PTCP , :PTR .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Rete_Natura_2000
+
+:Rete_Natura_2000 a owl:NamedIndividual ;
+	:ha_focus :Beni_Naturali ;
+	:ha_obiettivo :Rete_Ecologica ;
+	:mette_in_rete :Aree_Protette .
+# 
+# http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Piano_d'area_Parco_Regionale_La_Mandria
+
+<http://www.semanticweb.org/adriano/ontologies/2014/7/ontologia-atlante-3.0#Piano_d'area_Parco_Regionale_La_Mandria> a owl:NamedIndividual , :Riferimenti_Normativi ;
+	:ha_focus :Beni_Paesaggistici ;
+	rdfs:comment "Piano di tutela e gestione del parco \"La Mandria\", parte della rete \"Parchi Reali\"."@it ;
+	rdfs:label "Piano D'Area Parco Regionale La Mandria"@it .
+# 
+
+_:genid172 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+_:genid173 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+_:genid174 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+:Aree_Protette :keyword "vincolo"@it ;
+	:commonDefinition "Le aree naturali protette sono riserve, aree od oasi naturali che hanno la funzione di mantenere l’equilibrio ambientale ed ecologico di un determinato luogo, ovvero la preservazione della biodiversità, caratterizzate da paesaggi eterogenei ed abitate da diverse specie di animali e vegetali."@it ;
+	:sinonimo "territorio_protetto"@it ;
+	:lemma "area"@it ;
+	:sinonimo "ambiente naturale"@it ;
+	:keyword "territorio"@it ;
+	:sinonimo "comprensorio"@it , "area_naturale_protetta"@it ;
+	rdfs:comment "Parti del territorio soggette a vincoli paesaggistici."@it ;
+	:sinonimo "riserva_naturale"@it , "riserva_forestale"@it ;
+	:keyword "ecologico"@it ;
+	:sinonimo "oasi_naturale"@it , "zona_naturale"@it , "regione"@it , "località"@it ;
+	:lemma "protetto"@it ;
+	:keyword "preservazione"@it , "animale"@it ;
+	:sinonimo "riserva_faunistica"@it ;
+	:keyword "biodiversità"@it ;
+	rdfs:label "Aree Protette"@it ;
+	:sinonimo "area_naturalistica"@it , "riserva"@it ;
+	:keyword "equilibrio"@it ;
+	:sinonimo "superficie"@it ;
+	:keyword "vegetale"@it , "paesaggistico"@it ;
+	:sinonimo "habitat"@it , "oasi"@it , "zona"@it , "area_protetta"@it , "area_naturale"@it , "parco_naturale"@it ;
+	:keyword "paesaggio"@it ;
+	:sinonimo "bosco"@it , "spazio_naturale"@it , "riserva_biologica"@it ;
+	:keyword "riserva"@it ;
+	:sinonimo "parco"@it , "area"@it .
+# 
+
+:Beni_Naturali :keyword "acqua"@it ;
+	:lemma "naturale"@it ;
+	rdfs:comment "Capitale prodotto dalla natura e non dall’essere umano."@it ;
+	:keyword "roccia"@it ;
+	:sinonimo "naturalistico"@it , "natura"@it ;
+	:keyword "natura"@it ;
+	:commonDefinition "I Beni naturali sono gli elementi (Boschi, Acque, Rocce, Habitat, …) propri di un ambiente naturale, non creati dall’uomo."@it ;
+	:sinonimo "naturale"@it ;
+	rdfs:label "Beni Naturali"@it ;
+	:sinonimo "patrimonio"@it ;
+	:lemma "bene"@it ;
+	:sinonimo "proprietà"@it ;
+	:keyword "bosco"@it ;
+	:sinonimo "ambiente"@it , "bene"@it ;
+	:keyword "habitat"@it .
+# 
+
+:Beni_Paesaggistici :lemma "bene"@it , "paesaggistico"@it ;
+	:keyword "territorio"@it , "storico"@it , "estetico"@it , "immobile"@it ;
+	:sinonimo "patrimonio"@it ;
+	rdfs:label "Beni Paesaggistici"@it ;
+	:keyword "morfologico"@it ;
+	rdfs:comment "Beni immobili e aree costituenti espressione dei valori storici, culturali, naturali, morfologici ed estetici del territorio."@it ;
+	:sinonimo "cosa"@it ;
+	:keyword "culturale"@it ;
+	:sinonimo "paesaggio"@it ;
+	:keyword "naturale"@it .
+# 
+
+:Corona_Verde rdfs:label "Corona Verde"@it ;
+	:keyword "corona"@it ;
+	:lemma "verde"@it ;
+	:sinonimo "fascia"@it ;
+	:keyword "collina"@it ;
+	rdfs:comment "Progetto di parco territoriale che interessa trasversalmente tutta l'area metropolitana torinese."@it ;
+	:keyword "piemonte"@it , "regione"@it , "progetto"@it , "residenza"@it ;
+	:sinonimo "cintura"@it , "verde"@it ;
+	:keyword "torino"@it ;
+	:commonDefinition "La Corona verde è il nome del progetto strategico della Regione Piemonte che interessa l’area metropolitana e la collina di Torino (93 Comuni). Corona verde prende spunto dall’idea sviluppatasi ad inizio ‘900 nel Regno Unito, la cosiddetta “Green Belt” e riguarda la creazione di una infrastruttura verde che integra l’insieme delle residenze reali ed una cintura verde di parchi e aree rurali, al fine di salvaguardarne la riconoscibilità ed impedire uno sviluppo urbano disordinato (evitando quindi che avvenga un allargamento scomposto delle aree fabbricate, un abuso delle zone coltivate, una fusione tra aree urbane contermini)."@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "reale"@it ;
+	:lemma "corona"@it ;
+	:sinonimo "green belt"@it ;
+	:colore "ff0000" .
+# 
+
+:Infrastrutture :sinonimo "infrastruttura"@it ;
+	:keyword "movimento"@it , "merce"@it , "aereoporto"@it , "ferrovia"@it , "trasferimento"@it , "insediamento"@it ;
+	rdfs:comment "Complesso di opere che consentono i movimenti di passeggeri e trasferimenti di merci."@it ;
+	:keyword "complementare"@it ;
+	:lemma "infrastruttura"@it ;
+	:keyword "passeggero"@it ;
+	rdfs:label "Infrastrutture"@it ;
+	:commonDefinition "Il termine infrastruttura indica una struttura complementare ad un’altra ed è considerata necessaria per lo svolgimento di un’attività economica (strade, ferrovie, aeroporti, ecc.) o indispensabile per gli insediamenti urbani (fognature, parchi, giardini, ecc.)."@it ;
+	:keyword "strada"@it , "complesso"@it .
+# 
+
+:PAI rdfs:comment "Piano Assetto Idrogeologico"@it ;
+	rdfs:label "PAI"@it ;
+	:keyword "assetto"@it ;
+	:colore "ff0000" ;
+	:keyword "piano"@it ;
+	:lemma "pai"@it ;
+	:keyword "idrogeologico"@it ;
+	:haindividui "true"^^xsd:boolean .
+# 
+
+:PPR rdfs:label "PPR"@it ;
+	:colore "ff0000" ;
+	rdfs:comment "Piano Paesaggistico Regionale"@it ;
+	:haindividui "true"^^xsd:boolean ;
+	:keyword "piano"@it , "regionale"@it , "paesaggistico"@it ;
+	:lemma "ppr"@it .
+# 
+
+:PTCP :colore "ff0000" ;
+	rdfs:label "PTCP"@it ;
+	:lemma "ptcp"@it ;
+	:keyword "piano"@it , "territoriale"@it ;
+	:haindividui "true"^^xsd:boolean ;
+	rdfs:comment "Piano Territoriale di Coordinamento della Provincia di Torino"@it ;
+	:keyword "torino"@it , "coordinamento"@it , "provincia"@it .
+# 
+
+:PTR :keyword "piano"@it ;
+	:colore "ff0000" ;
+	:haindividui "true"^^xsd:boolean ;
+	rdfs:label "PTR"@it ;
+	rdfs:comment "Piano Territoriale Regionale"@it ;
+	:keyword "territoriale"@it , "regionale"@it ;
+	:lemma "ptr"@it .
+# 
+
+:Rete_Ecologica :sinonimo "rete_ecologica"@it ;
+	:keyword "vegetale"@it ;
+	:sinonimo "reticolato"@it , "rete"@it ;
+	:keyword "rete"@it ;
+	:sinonimo "reticolo"@it ;
+	:keyword "biodiversità"@it ;
+	:sinonimo "net"@it ;
+	:keyword "minacciato"@it ;
+	:lemma "rete"@it ;
+	:sinonimo "ecologico"@it ;
+	rdfs:label "Rete Ecologica"@it ;
+	:keyword "animale"@it ;
+	:sinonimo "network"@it ;
+	:keyword "habitat"@it ;
+	:lemma "ecologico"@it ;
+	rdfs:comment "Sistema interconnesso di habitat, di cui salvaguardare la biodiversità, ponendo quindi attenzione alle specie animali e vegetali potenzialmente minacciate."@it .
+# 
+
+:Rete_Natura_2000 :haindividui "true"^^xsd:boolean ;
+	:sinonimo "network"@it , "SIC"@it , "natura"@it , "protetto"@it , "sito"@it , "net"@it , "ZPS"@it ;
+	:keyword "unione europea"@it ;
+	:sinonimo "protezione"@it ;
+	:keyword "conservazione"@it ;
+	:sinonimo "zona"@it , "ambiente"@it , "natura_2000"@it ;
+	:lemma "natura"@it ;
+	:sinonimo "habitat"@it , "networking"@it ;
+	:keyword "biodiversità"@it ;
+	:lemma "rete"@it , "2000"@it ;
+	rdfs:comment "Strumento dell'Unione Europea per la conservazione della biodiversità."@it ;
+	:sinonimo "direttiva"@it , "interesse"@it , "comunitario"@it , "naturale"@it , "2000"@it ;
+	:colore "ff0000" ;
+	rdfs:label "Rete Natura 2000"@it ;
+	:sinonimo "rete_natura_2000"@it , "uccello"@it , "speciale"@it .
+# 
+# Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi
