@@ -529,7 +529,7 @@
                               /*adds the square for the different icons for different papers*/
                               $('.bibbase_paper_title > a').each(function() {
                                 var paperbib = ""+$(this).parent().parent().parent().find('pre').first().text();
-                                if (paperbib.toLowerCase().includes("workshop") || paperbib.toLowerCase().includes("symposium") || paperbib.toLowerCase().includes("adjunct") || paperbib.toLowerCase().includes("companion")){
+                                if (paperbib.toLowerCase().includes("workshop") || paperbib.toLowerCase().includes("workshops") || paperbib.toLowerCase().includes("symposium") || paperbib.toLowerCase().includes("adjunct") || paperbib.toLowerCase().includes("companion")){
                                     $(this).append('<span class="label label-workshop">W</span>');
                                 } 
                                 else if (paperbib.toLowerCase().includes("inproceedings")) {
